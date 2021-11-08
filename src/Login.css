@@ -1,0 +1,29 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 30%;
+  height: 40%;
+  background-color: white;
+  position: absolute;
+  left: 35%;
+  top: 20%;
+  border-radius: 5px;
+}
+
+.form input {
+  padding: 10px 30px;
+  margin: 10px;
+}
+
+.form .iconbtn {
+  position: absolute;
+  left: 74%;
+  top: 60%;
+}
+
+.form button {
+  width: 60px;
+  height: 40px;
+}

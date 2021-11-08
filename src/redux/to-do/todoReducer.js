@@ -2,10 +2,10 @@ import { ADD_TODO, DEL_TODO } from "./todoType";
 
 const initialState = [];
 
-const reducer = (state = initialState, action) => {
+const todoReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO:
-      return [...state, action.payload];
+      return [action.payload, ...state];
     case DEL_TODO:
       return state.filter((el) => el.id !== action.payload);
     default:
@@ -13,4 +13,4 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export default todoReducer;

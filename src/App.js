@@ -1,34 +1,20 @@
+import React from "react";
+import { Route, Switch } from "react-router-dom";
 import "./App.css";
-import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { addItem, delItem } from "./redux/to-do/todoAction";
-import { v4 } from "uuid";
 
-function App() {
-  const userArr = useSelector((state) => state);
-  const dispatch = useDispatch();
+import List from "./List";
+import Login from "./Login";
+import ProtectedRoute from "./ProtectedRoute";
 
-  const [txt, setTxt] = useState("");
-  // const obj = {
-  //   txt: txt,
-  //   id:v4(),
-  // }
+const App = () => {
   return (
     <div className="App">
-      <input type="text" onChange={(e) => setTxt(e.target.value)} />
-      <button onClick={() => dispatch(addItem({ txt: txt, id: v4() }))}>
-        Add
-      </button>
-      <ul>
-        {userArr.map((el) => (
-          <div key={el.id}>
-            <li>{el.txt}</li>
-            <button onClick={() => dispatch(delItem(el.id))}>del</button>
-          </div>
-        ))}
-      </ul>
+      <Switch>
+        <Route path="/" exact component={Login} />
+        <ProtectedRoute path="/list" component={List} />
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;

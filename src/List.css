@@ -1,0 +1,51 @@
+.list {
+  background-color: white;
+  padding: 20px;
+  width: 60%;
+  height: auto;
+  border-radius: 5px;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+}
+
+.list input {
+  padding: 10px 30px;
+  width: 50%;
+  margin: 0 10px;
+  margin-bottom: 30px;
+}
+
+.list button {
+  padding: 10px 30px;
+}
+
+.itm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 120px;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+}
+
+.delbtn {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.logoutbtn {
+  position: absolute;
+  left: 90%;
+  top: 20px;
+  padding: 10px 30px;
+}
+
+p {
+  padding: 0;
+  margin: 0 10px;
+}
